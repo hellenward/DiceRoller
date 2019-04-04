@@ -13,14 +13,13 @@
       <fieldset>
         <legend>Enter your roll</legend>
         <label>Number of Dice rolled</label>
-        <input type="text" placeholder="0">
+        <input id="diceNumber" type="text" placeholder="0">
         <label>Number of Sides on Dice</label>
-        <input type="text" placeholder="0">
-        <div>
-          <button type="submit">Submit</button>
-        </div>
+        <input id="sidesNumber" type="text" placeholder="0">
       </fieldset>
     </form>
+
+    <button class="submitButton" type="submit">Submit</button>
 
     <div>
       <p>Score this roll</p>
@@ -29,7 +28,10 @@
       <div class="totalScore"></div>
     </div>
 
-    <button type="submit">Reset</button>
+    <button class="resetButton" type="submit">Reset</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 
   </body>
 
