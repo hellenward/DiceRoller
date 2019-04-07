@@ -21,14 +21,16 @@ $(document).ready(function() {
     function throwHandler(throwArray) {
       console.log(throwArray);
       for(let i = 0; i < throwArray.length; i++) {
-        console.log(`You threw a ${throwArray[i]}`);
+        const placeHolder = document.getElementById("scoreThisRoll");
+        placeHolder.insertAdjacentHTML('afterend', `You threw a ${throwArray[i]}<br>`);
       };
     }
 
     throwHandler(throwArray);
 
     const totalThrowArray = throwArray.reduce((partial_sum, a) => partial_sum + a);
-    console.log(totalThrowArray);
+    const placeHolderTotal = document.getElementById("totalScore");
+    placeHolderTotal.insertAdjacentHTML('afterend', `Total score: ${totalThrowArray}`);
 
   });
   $('.resetButton').click(function() {
