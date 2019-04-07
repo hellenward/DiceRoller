@@ -7,7 +7,7 @@ $(document).ready(function() {
   $('.submitButton').click(function(diceNumber, sidesNumber) {
     var diceNumberVal = $('#diceNumber').val();
     var sidesNumberVal = $('#sidesNumber').val();
-    const throwArray = []
+    let throwArray = [];
 
     if ($.isNumeric(diceNumberVal) && ($.isNumeric(sidesNumberVal)) ) {
         for (let i = 0; i < diceNumberVal; i++) {
@@ -18,6 +18,17 @@ $(document).ready(function() {
       console.log("Oops, this doesn't look like a number!  Try again.");
     };
 
+    function throwHandler(throwArray) {
+      console.log(throwArray);
+      for(let i = 0; i < throwArray.length; i++) {
+        console.log(`You threw a ${throwArray[i]}`);
+      };
+    }
+
+    throwHandler(throwArray);
+
+    const totalThrowArray = throwArray.reduce((partial_sum, a) => partial_sum + a);
+    console.log(totalThrowArray);
 
   });
   $('.resetButton').click(function() {
