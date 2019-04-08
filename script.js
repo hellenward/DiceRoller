@@ -15,25 +15,25 @@ $(document).ready(function() {
           throwArray.push(result);
         }
     } else {
-      console.log("Oops, this doesn't look like a number!  Try again.");
+      const placeHolder = document.querySelector(".scoreThisRoll");
+      placeHolder.insertAdjacentHTML('afterend', 'Oops! You need to enter a number. Hit reset to try again');
     };
 
     function throwHandler(throwArray) {
-      console.log(throwArray);
       for(let i = 0; i < throwArray.length; i++) {
-        const placeHolder = document.getElementById("scoreThisRoll");
-        placeHolder.insertAdjacentHTML('afterend', `You threw a ${throwArray[i]}<br>`);
+        const placeHolder = document.querySelector(".scoreThisRoll");
+        placeHolder.insertAdjacentHTML('afterend', `<p class="newThrow">You threw a ${throwArray[i]}</p><br>`);
       };
     }
 
     throwHandler(throwArray);
 
     const totalThrowArray = throwArray.reduce((partial_sum, a) => partial_sum + a);
-    const placeHolderTotal = document.getElementById("totalScore");
+    const placeHolderTotal = document.querySelector(".totalScore");
     placeHolderTotal.insertAdjacentHTML('afterend', `Total score: ${totalThrowArray}`);
 
   });
   $('.resetButton').click(function() {
-    console.log("Goodbye then");
+    document.getElementById("bitsToClear").innerHTML = '<div><p class="scoreThisRoll"></p></div><div><p class="totalScore"></p></div>'
   });
 })
