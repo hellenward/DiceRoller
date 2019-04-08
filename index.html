@@ -4,18 +4,19 @@
   <head>
     <meta charset="utf-8">
     <title>Dice Roller</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
 
   <body>
     <h1>Dice Throw Calculator</h1>
 
     <form method="post">
-      <fieldset>
-        <legend>Enter your roll</legend>
-        <label>Number of Dice rolled</label>
-        <input id="diceNumber" type="text" placeholder="0">
-        <label>Number of Sides on Dice</label>
-        <input id="sidesNumber" type="text" placeholder="0">
+      <fieldset class="formStyle">
+        <legend class="legendText">Roll your dice</legend>
+        <label class="formText">Number of Dice rolled</label>
+        <input class ="formText" id="diceNumber" type="text" placeholder="0">
+        <label class="formText">Number of Sides on Dice</label>
+        <input class="formText" id="sidesNumber" type="text" placeholder="0">
       </fieldset>
       <button class="resetButton" type="reset" value="reset">Reset</button>
     </form>

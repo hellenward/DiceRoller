@@ -1,0 +1,34 @@
+body {
+  background-color: grey;
+  font-family: Helvetica;
+}
+
+form {
+  display: inline-block;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.formStyle {
+  border-color: crimson;
+}
+
+.legendText {
+  font-size: 28px;
+  text-align: center;
+  padding: 10px;
+  font-style: italic;
+}
+
+input {
+  display: flex;
+  margin: auto;
+  text-align: center;
+  color: red;
+}
+
+.formText {
+  color: crimson;
+  padding: 5px;
+}
