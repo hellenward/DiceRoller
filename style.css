@@ -28,7 +28,8 @@ h1 {
 
 input {
   display: flex;
-  margin: auto;
+  margin: 5px auto;
+  padding: 15px;
   text-align: center;
   color: #379683;
 }
@@ -36,4 +37,39 @@ input {
 .formText {
   color: #379683;
   padding: 5px;
+}
+
+.resetButton {
+  margin: 5px;
+  width: 57px;
+
+}
+
+.submitButton {
+  margin: 5px;
+}
+
+p {
+  align-items: center;
+}
+
+.scoreTable {
+  visibility: hidden;
+  border: solid 1px;
+  margin-top: 10px;
+  border-color: #907163;
+}
+
+.newThrow {
+  text-align: center;
+  font-size: 18px;
+  color: white;
+}
+
+.totalScore {
+  font-weight: bold;
+  color: red;
+  font-size: 24px;
+  text-align: right;
+  margin-right: 10px;
 }

@@ -5,9 +5,12 @@ $(document).ready(function() {
   const sidesNumber = 0;
 
   $('.submitButton').click(function(diceNumber, sidesNumber) {
+    resetMe();
     var diceNumberVal = $('#diceNumber').val();
     var sidesNumberVal = $('#sidesNumber').val();
     let throwArray = [];
+    $(".scoreTable").css({"visibility": "visible"});
+
 
     if ($.isNumeric(diceNumberVal) && ($.isNumeric(sidesNumberVal)) ) {
         for (let i = 0; i < diceNumberVal; i++) {
@@ -22,7 +25,7 @@ $(document).ready(function() {
     function throwHandler(throwArray) {
       for(let i = 0; i < throwArray.length; i++) {
         const placeHolder = document.querySelector(".scoreThisRoll");
-        placeHolder.insertAdjacentHTML('afterend', `<p class="newThrow">You threw a ${throwArray[i]}</p><br>`);
+        placeHolder.insertAdjacentHTML('afterend', `<p class="newThrow">You threw a ${throwArray[i]}</p>`);
       };
     }
 
@@ -30,10 +33,13 @@ $(document).ready(function() {
 
     const totalThrowArray = throwArray.reduce((partial_sum, a) => partial_sum + a);
     const placeHolderTotal = document.querySelector(".totalScore");
-    placeHolderTotal.insertAdjacentHTML('afterend', `Total score: ${totalThrowArray}`);
+    placeHolderTotal.insertAdjacentHTML('afterend', `<p class="totalScore">Total score: ${totalThrowArray}</p>`);
 
   });
-  $('.resetButton').click(function() {
+
+  function resetMe () {
     document.getElementById("bitsToClear").innerHTML = '<div><p class="scoreThisRoll"></p></div><div><p class="totalScore"></p></div>'
-  });
+  }
+
+  $('.resetButton').click(resetMe());
 })
