@@ -1,5 +1,5 @@
 body {
-  background-color: grey;
+  background-color: black;
   font-family: Helvetica;
 }
 
@@ -10,8 +10,12 @@ form {
   text-align: center;
 }
 
+h1 {
+  color: firebrick;
+}
+
 .formStyle {
-  border-color: crimson;
+  border-color: #907163;
 }
 
 .legendText {
@@ -19,16 +23,17 @@ form {
   text-align: center;
   padding: 10px;
   font-style: italic;
+  color: #907163;
 }
 
 input {
   display: flex;
   margin: auto;
   text-align: center;
-  color: red;
+  color: #379683;
 }
 
 .formText {
-  color: crimson;
+  color: #379683;
   padding: 5px;
 }
