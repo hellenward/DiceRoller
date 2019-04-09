@@ -9,29 +9,30 @@
 
   <body>
     <h1>Dice Throw Calculator</h1>
+    <div class="parentContainer">
 
-    <form method="post">
-      <fieldset class="formStyle">
-        <legend class="legendText">Roll your dice</legend>
-        <label class="formText">Number of Dice rolled</label>
-        <input class ="formText" id="diceNumber" type="text" placeholder="0">
-        <label class="formText">Number of Sides on Dice</label>
-        <input class="formText" id="sidesNumber" type="text" placeholder="0">
-        <button class="submitButton" type="button">Submit</button>
-        <button class="resetButton" type="reset" value="reset">Reset</button>
-      </fieldset>
-    </form>
+      <form method="post">
+        <fieldset class="formStyle">
+          <legend class="legendText">Roll your dice</legend>
+          <label class="formText">Number of Dice rolled</label>
+          <input class ="formText" id="diceNumber" type="text" placeholder="0">
+          <label class="formText">Number of Sides on Dice</label>
+          <input class="formText" id="sidesNumber" type="text" placeholder="0">
+          <button class="submitButton" type="button">Submit</button>
+          <button class="resetButton" type="reset" value="reset">Reset</button>
+        </fieldset>
+      </form>
 
 
-    <div id="bitsToClear" class="scoreTable">
-      <div>
-        <p class="scoreThisRoll"></p>
-      </div>
-      <div class="totalScore">
-        <p class="totalScore"></p>
+      <div id="bitsToClear" class="scoreTable">
+        <div>
+          <p class="scoreThisRoll"></p>
+        </div>
+        <div class="totalScore">
+          <p class="totalScore"></p>
+        </div>
       </div>
     </div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
 

@@ -6,7 +6,7 @@ body {
 form {
   display: inline-block;
   align-items: center;
-  width: 100%;
+  width: 50%;
   text-align: center;
 }
 
@@ -16,6 +16,7 @@ h1 {
 
 .formStyle {
   border-color: #907163;
+  margin-right: 20px;
 }
 
 .legendText {
@@ -58,6 +59,8 @@ p {
   border: solid 1px;
   margin-top: 10px;
   border-color: #907163;
+  position: relative;
+  width: 50%;
 }
 
 .newThrow {
@@ -72,4 +75,9 @@ p {
   font-size: 24px;
   text-align: right;
   margin-right: 10px;
+}
+
+.parentContainer {
+  display: inline-flex;
+  width: 100%;
 }
