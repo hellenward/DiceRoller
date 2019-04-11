@@ -5,7 +5,7 @@ $(document).ready(function() {
   const sidesNumber = 0;
 
   $('.submitButton').click(function(diceNumber, sidesNumber) {
-    resetMe();
+    document.getElementById("bitsToClear").innerHTML = '<div><p class="scoreThisRoll"></p></div><div><p class="totalScore"></p></div>';
     var diceNumberVal = $('#diceNumber').val();
     var sidesNumberVal = $('#sidesNumber').val();
     let throwArray = [];
@@ -37,9 +37,7 @@ $(document).ready(function() {
 
   });
 
-  function resetMe () {
-    document.getElementById("bitsToClear").innerHTML = '<div><p class="scoreThisRoll"></p></div><div><p class="totalScore"></p></div>'
-  }
-
-  $('.resetButton').click(resetMe());
+  $('.resetButton').click(function() {
+    document.getElementById("bitsToClear").innerHTML = '<div><p class="scoreThisRoll"></p></div><div><p class="totalScore"></p></div>';
+  });
 })
