@@ -69,6 +69,18 @@ p {
   color: white;
 }
 
+.newThrowRed {
+  text-align: center;
+  font-size: 18px;
+  color: red;
+}
+
+.newThrowGreen {
+  text-align: center;
+  font-size: 18px;
+  color: green;
+}
+
 .totalScore {
   font-weight: bold;
   color: red;
