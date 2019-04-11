@@ -1,21 +1,25 @@
 
 $(document).ready(function() {
 
-  const diceNumber = 0;
-  const sidesNumber = 0;
+  let throwsNumber = 0;
 
   $('.addMore').click(function() {
     const moreDice = document.querySelector(".moreDice");
     moreDice.insertAdjacentHTML('afterend', `<label class="formText moreDice">Number of Dice rolled</label>
-    <input class="formText moreDice diceNumber" type="text" placeholder="0"><label class="formText moreDice">Number of
-    Sides on Dice</label><input class="formText moreDice" class="sidesNumber" type="text" placeholder="0">`);
+    <input class="formText moreDice diceNumber1" type="text" placeholder="0"><label class="formText moreDice">Number of
+    Sides on Dice</label><input class="formText moreDice" class="sidesNumber1" type="text" placeholder="0">`);
+    throwsNumber ++;
   })
 
   $('.submitButton').click(function(diceNumber, sidesNumber) {
     document.getElementById("bitsToClear").innerHTML = '<div><p class="scoreThisRoll"></p></div><div><p class="totalScore"></p></div>';
-    var diceNumberVal = $('.diceNumber').val();
-    var sidesNumberVal = $('.sidesNumber').val();
     let throwArray = [];
+    $('.oneThrow').each(function() {
+      var diceNumberVal = $('.diceNumber').val();
+      var sidesNumberVal = $('.sidesNumber').val();
+      throwArray.push(`{throw = {"diceNumber": {diceNumberVal}, "sidesNumberVal": {sidesNumberVal}}`);
+    })
+
     $(".scoreTable").css({"visibility": "visible"});
 
 
