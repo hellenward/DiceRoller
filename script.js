@@ -24,7 +24,7 @@ $(document).ready(function() {
         }
     } else {
       const placeHolder = document.querySelector(".scoreThisRoll");
-      placeHolder.insertAdjacentHTML('afterend', 'Oops! You need to enter a number. Hit reset to try again');
+      placeHolder.insertAdjacentHTML('afterend', `<p class=scoreThisRoll>Oops! You need to enter a number. Hit reset to try again<p>`);
     };
 
     function throwHandler(throwArray) {
