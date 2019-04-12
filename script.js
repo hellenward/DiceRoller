@@ -6,7 +6,7 @@ $(document).ready(function() {
   $('.addMore').click(function() {
     const moreDice = document.querySelector(".moreDice");
     moreDice.insertAdjacentHTML('afterend', `<label class="formText moreDice">Number of Dice rolled</label>
-    <input class="formText moreDice diceNumber1" type="text" placeholder="0"><label class="formText moreDice">Number of
+    <input class="formText diceNumber1" type="text" placeholder="0"><label class="formText moreDice">Number of
     Sides on Dice</label><input class="formText moreDice" class="sidesNumber1" type="text" placeholder="0">`);
     throwsNumber ++;
   })
