@@ -16,7 +16,7 @@ $(document).ready(function() {
         for (let i = 0; i < diceNumberVal; i++) {
           let result = Math.floor(Math.random() * sidesNumberVal + 1);
           if(sidesNumberVal === "20" && result === 20) {
-            result = "green"
+            result = "green";
           } else if (sidesNumberVal === "20" && result === 1) {
             result = "red";
           }
